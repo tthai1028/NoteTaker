@@ -5,7 +5,9 @@ const bodyParser = require("body-parser");
 const apiRouter = require("./api");
 
 const app = express();
-const port = 3000;
+
+var port_number = server.listen(process.env.PORT || 3000);
+app.listen(port_number);
 
 app.use(express.static("public"));
 
