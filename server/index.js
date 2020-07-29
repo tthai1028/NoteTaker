@@ -6,8 +6,10 @@ const apiRouter = require("./api");
 
 const app = express();
 
-var port_number = server.listen(process.env.PORT || 3000);
-app.listen(port_number);
+var port = process.env.PORT || 3000;
+app.listen(port, "0.0.0.0", function() {
+console.log("Listening on Port 3000");
+});
 
 app.use(express.static("public"));
 
