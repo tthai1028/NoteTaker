@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const apiRouter = require("./api");
 
 const app = express();
-const port = 6060;
+const port = process.env.PORT || 8080;
 
 app.use(express.static("public"));
 
